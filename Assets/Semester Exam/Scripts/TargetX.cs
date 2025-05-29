@@ -27,7 +27,7 @@ public class TargetX : MonoBehaviour
     }
 
     // When target is clicked, destroy it, update score, and generate explosion
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
         if (gameManagerX.isGameActive)
         {
@@ -71,7 +71,7 @@ public class TargetX : MonoBehaviour
     // Display explosion particle at object's position
     void Explode ()
     {
-        Instantiate(explosion, transform.position, explosion.transform.rotation);
+        Instantiate(explosionFx, transform.position, explosionFx.transform.rotation);
     }
 
     // After a delay, Moves the object behind background so it collides with the Sensor object
